@@ -8,7 +8,7 @@ const baseURL =
     : "https://vast-garden-66060.herokuapp.com/auth"
 const authService = axios.create({
   baseURL,
-  withCredentials: "true",
+  withCredentials: true,
   headers: {
     "Access-Control-Allow-Credentials": "true"
   }
