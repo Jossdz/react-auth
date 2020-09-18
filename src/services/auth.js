@@ -4,11 +4,11 @@ axios.defaults.withCredentials = true
 
 const baseURL =
   process.env.NODE_ENV === "development"
-    ? "http://localhost:3001/"
+    ? "http://localhost:3000/auth"
     : "https://vast-garden-66060.herokuapp.com/auth"
 const authService = axios.create({
   baseURL,
-  withCredentials: true
+  crossDomain: true
 })
 // Nosotros vamos a mandar las credenciales siempre que utilicemos al usuario en sesion o querramos utilizar la sesion
 
