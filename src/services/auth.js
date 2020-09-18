@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const baseURL = "http://localhost:3000/auth"
+const baseURL = "https://vast-garden-66060.herokuapp.com/auth"
 const authService = axios.create({
   baseURL,
   withCredentials: true
