@@ -8,7 +8,7 @@ const baseURL =
     : "https://vast-garden-66060.herokuapp.com/auth"
 const authService = axios.create({
   baseURL,
-  crossDomain: true
+  withCredentials: "true"
 })
 // Nosotros vamos a mandar las credenciales siempre que utilicemos al usuario en sesion o querramos utilizar la sesion
 
