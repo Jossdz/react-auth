@@ -6,15 +6,14 @@ export const Context = createContext()
 export default function OurProvider({ children }) {
   const [user, setuser] = useState(null)
 
-  async function getSession() {
-    const { user } = await getCurrentUser()
-    console.log(user)
-    if (user?.email) {
-      loginUser(user)
-    }
-  }
-
   useEffect(() => {
+    async function getSession() {
+      const { user } = await getCurrentUser()
+      console.log(user)
+      if (user?.email) {
+        loginUser(user)
+      }
+    }
     getSession()
   }, [])
 
